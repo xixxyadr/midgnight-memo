@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p>${entry.text}</p>
                     <small class="date">${entry.date}</small>
                 </div>
-                <button class="delete-btn" onclick="deleteEntry(${index})">Hapus</button>
+                <button class="delete-btn" onclick="deleteEntry(${index})">Remove</button>
             `;
             journalList.appendChild(li);
         });
