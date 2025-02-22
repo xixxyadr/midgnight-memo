@@ -1,0 +1,111 @@
+/* Import Font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Mengatur tampilan utama */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0A192F; /* Dark Blue */
+    color: #E0E0E0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container utama */
+.container {
+    width: 50%;
+    margin: auto;
+    background: #112240; /* Darker Blue */
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.3);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+/* Judul */
+h1 {
+    font-size: 32px;
+    color: #64ffda; /* Neon Blue */
+    font-weight: 600;
+}
+
+/* Textarea untuk input */
+textarea {
+    width: 90%;
+    height: 120px;
+    padding: 12px;
+    background: #233554;
+    border: 2px solid #64ffda;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    resize: none;
+}
+
+/* Tombol Save */
+button {
+    background-color: #64ffda;
+    color: #112240;
+    padding: 12px 24px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #52e4c1;
+}
+
+/* Judul untuk daftar catatan */
+h2 {
+    color: #64ffda;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+/* Daftar catatan */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Setiap catatan */
+li {
+    background: #233554;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: 400;
+}
+
+/* Tanggal catatan */
+.date {
+    font-size: 0.9em;
+    color: #a8b2d1;
+    margin-right: 10px;
+}
+
+/* Tombol Hapus */
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.delete-btn:hover {
+    background-color: #7d0000;
+}
