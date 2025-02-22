@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const journalEntry = document.getElementById("journalEntry");
     const journalList = document.getElementById("journalList");
 
-    // Fungsi untuk memuat catatan dari LocalStorage
+   
     function loadEntries() {
-        journalList.innerHTML = ""; // Hapus tampilan lama
-        let entries = JSON.parse(localStorage.getItem("entries")) || []; // Ambil data dari LocalStorage
+        journalList.innerHTML = "";
+        let entries = JSON.parse(localStorage.getItem("entries")) || []; 
         
         entries.forEach((entry, index) => {
             let li = document.createElement("li");
@@ -21,31 +21,31 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Fungsi untuk menyimpan catatan ke LocalStorage
+
     saveBtn.addEventListener("click", function () {
         let text = journalEntry.value.trim();
-        if (text === "") return; // Jika kosong, jangan simpan
+        if (text === "") return;
         
-        let entries = JSON.parse(localStorage.getItem("entries")) || []; // Ambil data lama
+        let entries = JSON.parse(localStorage.getItem("entries")) || [];
         let newEntry = {
             text: text,
-            date: new Date().toLocaleString("id-ID") // Tambahkan tanggal & waktu
+            date: new Date().toLocaleString("id-ID")
         };
 
-        entries.push(newEntry); // Tambahkan catatan baru
-        localStorage.setItem("entries", JSON.stringify(entries)); // Simpan ke LocalStorage
+        entries.push(newEntry); 
+        localStorage.setItem("entries", JSON.stringify(entries)); 
         
-        journalEntry.value = ""; // Kosongkan input setelah disimpan
-        loadEntries(); // Tampilkan ulang daftar catatan
+        journalEntry.value = ""; 
+        loadEntries();
     });
 
-    // Fungsi untuk menghapus catatan
+    
     window.deleteEntry = function (index) {
         let entries = JSON.parse(localStorage.getItem("entries")) || [];
-        entries.splice(index, 1); // Hapus catatan berdasarkan indeks
-        localStorage.setItem("entries", JSON.stringify(entries)); // Simpan ulang
-        loadEntries(); // Tampilkan ulang daftar catatan
+        entries.splice(index, 1); 
+        localStorage.setItem("entries", JSON.stringify(entries));
+        loadEntries();
     };
 
-    loadEntries(); // Panggil saat halaman pertama kali dibuka
+    loadEntries(); 
 });
